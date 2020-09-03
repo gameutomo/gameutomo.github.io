@@ -84,7 +84,7 @@
             </a>
           </li>
           <li class="nav-item btn btn-primary text-left border-0">
-            <a class="nav-link" href="reservation.html">
+            <a class="nav-link" href="reservation-list.html">
               <span data-feather="calendar"></span>
               Booking
             </a>
@@ -152,9 +152,9 @@
 
 	    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-5 pt-3">
 	      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-4 mb-3 border-bottom">
-	        <h4 class="h2 text-muted">Add Reservation</h4>
+	        <h4 class="h2 text-muted">New Reservation</h4>
 	        <div class="btn-toolbar mb-2 mb-md-0">
-	          <a href="dashboard.html" class="btn btn-sm btn-outline-secondary"><span data-feather="arrow-left"></span>&nbspData List</a>
+	          <a href="reservation-list.html" class="btn btn-sm btn-outline-secondary"><span data-feather="arrow-left"></span>&nbspData List</a>
 	        </div>
 	      </div>
 
@@ -258,55 +258,37 @@
 			        </button>
 			      </div>
 			      <div class="modal-body">
-			       	<div class="card-group">
-					  <div class="card">
-					  	<div class="text-center">
-					  		<img src="https://img.icons8.com/bubbles/24/000000/user.png" class="img rounded-circle" alt="." style="width: 70px;height: 70px;">
-					  	</div>
-					    
-					    <div class="card-body">
-					      <h5 class="card-title text-center">Adam Nabiha Armstrong</h5>
-					      <table class="table table-hover w-100">
-					      	<tr>
-					      		<td>NIK</td>
-					      		<td>12345857594</td>
-					      	</tr>
-					      	<tr>
-					      		<td style="vertical-align: middle;">Tipe</td>
-					      		<td><div class="alert-primary py-1 px-2 rounded "><strong>KTA Subscript</strong></div></td>
-					      	</tr>
-					      	<tr>
-					      		<td>No KTA</td>
-					      		<td><div class="alert-primary py-1 px-2 rounded">12345</div></td>
-					      	</tr>
-					      	<tr>
-					      		<td>Periode Subs</td>
-					      		<td>
-					      			23 Jan 2020<br>
-					      			23 Jan 2021
-					      		</td>
-					      	</tr>
-					      	
-					      	<tr>
-					      		<td>Status</td>
-					      		<td><span class="badge badge-primary">Active</span></td>
-					      	</tr>
-					      	
-					      </table>
-					      <p class="card-text">
+			       	<div class="row">
+				        <div class="col-md-3 border-right">
+				            <div class="d-flex flex-column align-items-center text-center p-3 "><img class="rounded-circle mt-2" src="https://i.imgur.com/O1RmJXT.jpg" width="90">
+				            	<span class="font-weight-bold">Djaja Soeprana</span>
+				            	<span class="text-black-50 mt-2"><span data-feather="phone"></span>&nbsp0888888998</span>
+				            	<span class="alert-primary p-2 mt-2">Subscript</span>
+				            </div>
 
-					      </p>
-					      <p class="card-text text-right"><small class="text-muted"><a href="#" class="btn-link">Edit User</a></small></p>
-					    </div>
-					  </div>
-					  
-					  <div class="card">
-					    
-					    <div class="card-body py-2">
-					    	<div class="text-center font-weight-bold text-primary h5 border-bottom pb-2">
-						    	Booking
-						    </div>
-					      	<form class="mt-4">
+			            	<div class="border-top my-2 py-2">
+			            		<small>NIK</small>
+			            		<h6>12345</h6>
+			            	</div>
+			            	<div class="border-top my-2 py-2">
+			            		<small>KTA</small>
+			            		<h6>998498</h6>
+			            	</div>
+			            	<div class="border-top my-2 py-2">
+			            		<small>E-mail</small><br>
+			            		<small class="font-weight-bold">mail@mail.com</small>
+			            	</div>
+			            	<div class="border-top my-2 py-2">
+			            		<small>Subscription</small><br>
+			            		<small class="font-weight-bold">22 Aug 2020 - 22 Aug 2021</small>
+			            	</div>
+
+
+				        </div>
+				        <div class="col-md-5 border-right">
+				        	<h5 class="p-3 border-bottom">Booking</h5>
+				            <div class="px-3">
+				                <form class="mt-4">
 							  <div class="form-group">
 							    <label for="exampleInputEmail1">Tanggal</label>
 							    <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -334,11 +316,27 @@
 							  </div>
 
 							  <div class="form-group">
-							    <label for="exampleInputEmail1">Note</label>
-							    <textarea class="form-control" placeholder="Address |max 255|optional" rows="3" resize="none"></textarea>
+							    <label for="exampleInputEmail1">Terima Bayar</label>
+							    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 							  </div>
 
-							  	<div class="form-group">
+
+							  
+
+							  	
+
+							  
+
+
+							  
+							</form>
+				            </div>
+				        </div>
+				        <div class="col-md-4">
+				        	<h5 class="p-3 border-bottom">Allotment</h5>
+				            <div class="px-3">
+				            	
+				            	<div class="form-group">
 							      <label for="exampleInputEmail1">Arena</label>
 							      <select class="custom-select">
 									  <option value="1">SNV 1</option>
@@ -357,23 +355,27 @@
 									</select>
 							    </div>
 
-							  <div class="form-group">
-							    <label for="exampleInputEmail1">Terima Bayar</label>
-							    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-							  </div>
+							    <div class="form-group">
+								    <label for="exampleInputEmail1">Note</label>
+								    <textarea class="form-control" placeholder="Informasi atambahan |max 255|optional" rows="3" resize="none"></textarea>
+								  </div>
+
+							    
+
+							    <button type="submit" class="btn btn-primary">Proses</button>
+								
+				            </div>
+
+				        </div>
 
 
-							  <button type="submit" class="btn btn-primary">Simpan</button>
-							</form>
-					    </div>
-					  </div>
-					</div>
+				    </div>
 			      </div>
 			    </div>
 			  </div>
 			</div>
 
-		<!-- end modal -->
+	<!-- end modal -->
 
 
 </body>
