@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Senayan Shooting Range">
+    <meta name="author" content="Aulia Ahmad Nur Utomo">
+    <meta name="generator" content="codefio app v.1">
+	<title>New Reservation | SSR</title>
+
+
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark sticky-top bg-primary flex-md-nowrap p-0 shadow">
+	  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">SSR</a>
+	  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+	  <div class="btn-group p-3 ml-auto">
+		  <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Profile
+			  </button>
+			  <div class="dropdown-menu dropdown-menu-right">
+			    <button class="dropdown-item" type="button">Action</button>
+			    <button class="dropdown-item" type="button">Another action</button>
+			    <button class="dropdown-item" type="button">Something else here</button>
+			  </div>
+		</div>
+	  <!-- <ul class="navbar-nav px-3">
+	    <li class="nav-item text-nowrap">
+	      <a class="nav-link" href="#">Sign out</a>
+	    </li>
+	  </ul> -->
+	</nav>
+
+	<div class="container-fluid">
+	  <div class="row">
+	    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-primary sidebar collapse">
+    	<style type="text/css">
+    		
+    		.sidebar-sticky{
+    			font-size: 1.2em;
+    		}
+    		.sidebar-sticky .nav .nav-item{
+    			border:1px solid #ddd;
+    			margin-top: 10px;
+    		}
+    	</style>
+      <div class="sidebar-sticky p-3 pt-5">
+        <ul class="nav flex-column ">
+          <li class="nav-item btn active text-left border-0">
+            <a class="nav-link" href="index.html">
+              <span data-feather="home"></span>
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item btn btn-primary text-left border-0">
+            <a class="nav-link" href="register-guest.html">
+              <span data-feather="user-plus"></span>
+              Register
+            </a>
+          </li>
+          <li class="nav-item btn btn-primary text-left border-0">
+            <a class="nav-link" href="reservation-list.html">
+              <span data-feather="calendar"></span>
+              Booking
+            </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="shopping-cart"></span>
+              Products
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="users"></span>
+              Customers
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="bar-chart-2"></span>
+              Reports
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              Integrations
+            </a>
+          </li> -->
+        </ul>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-white">
+          <span>Reports</span>
+          <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+            <span data-feather="plus-circle"></span>
+          </a>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+              List Reservasi
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+              Guest
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+              Caddy
+            </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+              Year-end sale
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+
+	    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-5 pt-3">
+	      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-4 mb-3 border-bottom">
+	        <h4 class="h2 text-muted">New Reservation</h4>
+	        <div class="btn-toolbar mb-2 mb-md-0">
+	          <a href="reservation-list.html" class="btn btn-sm btn-outline-secondary"><span data-feather="arrow-left"></span>&nbspData List</a>
+	        </div>
+	      </div>
+
+	      <div class="col-md-12 pt-4 px-0">
+	      	<div class="mx-auto" style="max-width: 1366px;">
+	      		<form class="col-md-8 px-0 mb-3">
+						<div class="form-row">
+						    <div class="col-md-5 mb-3">
+						      <!-- <label class="font-weight-bold">Dari</label> -->
+						      <input type="text" class="form-control" required placeholder="Masukan kata pencarian">
+						    </div>
+						    <div class="col-md-5 mb-3">
+						      <!-- <label class="font-weight-bold">Sampai</label> -->
+						      <select class="custom-select">
+								  <option value="1">Nama</option>
+								  <option value="2">NIK</option>
+								  <option value="3">Email</option>
+								</select>
+						    </div>
+						    <div class="col-md-2 mb-3">
+						    	<button type="button" class="btn btn-light border"><span data-feather="search"></span>&nbsp Search</button>
+						    </div>
+						  </div>
+					</form>
+
+	      		<table class="table table-hover table-cards align-items-center datatable">
+                  <tbody>
+                      <tr data-val="ADAM" >
+                          <th scope="row">
+                              <div class="media align-items-center">
+                                  <img src="assets/images/prv/thumb-1.jpg" class="avatar avatar-lg mr-3">
+                                  <div class="media-body">
+                                      <h6 class="h5 font-weight-normal mb-0">Adam Nabiha Armstrong</h6>
+                                      <span class="font-weight-normal text-muted">Web Developer</span>
+                                  </div>
+                              </div>
+                          </th>
+                          <td><span class="d-none d-md-block">nabiha.armstrong@example.com</span></td>
+                          <td><span class="d-none d-md-block">nabiha.armstrong@example.com</span></td>
+                          <td><a href="#" class="btn btn-outline-secondary" data-toggle="modal" data-target="#inListBooking">Guest Code</a></td>
+                      </tr>
+                      <tr data-val="DODY">
+                          <th scope="row">
+                              <div class="media align-items-center">
+                                  <img src="assets/images/prv/thumb-2.jpg" class="avatar avatar-lg mr-3">
+                                  <div class="media-body">
+                                      <h6 class="h5 font-weight-normal mb-0">Dody Dan Holding</h6>
+                                      <span class="font-weight-normal text-muted">Product Designer</span>
+                                  </div>
+                              </div>
+                          </th>
+                          <td><span class="d-none d-md-block">nabiha.armstrong@example.com</span></td>
+                          <td><span class="d-none d-md-block">nabiha.armstrong@example.com</span></td>
+                          <td><a href="#" class="btn btn-outline-secondary" data-toggle="modal" data-target="#inListBooking">Guest Code</a></td>
+                      </tr>
+                      <tr data-val="TARNO">
+                          <th scope="row">
+                              <div class="media align-items-center">
+                                  <span class="avatar avatar-lg bg-blue mr-3">WS</span>
+                                  <div class="media-body">
+                                      <h6 class="h5 font-weight-normal mb-0">Tarno Will Smith</h6>
+                                      <span class="font-weight-normal text-muted">Sales Manager</span>
+                                  </div>
+                              </div>
+                          </th>
+                          <td><span class="d-none d-md-block">nabiha.armstrong@example.com</span></td>
+                          <td><span class="d-none d-md-block">nabiha.armstrong@example.com</span></td>
+                          <td><a href="#" class="btn btn-outline-secondary" data-toggle="modal" data-target="#inListBooking">Guest Code</a></td>
+                      </tr>
+                      <tr data-val="ROBI">
+                          <th scope="row">
+                              <div class="media align-items-center">
+                                  <span class="avatar avatar-lg bg-pink mr-3">CT</span>
+                                  <div class="media-body">
+                                      <h6 class="h5 font-weight-normal mb-0">Robi Charlize Theron</h6>
+                                      <span class="font-weight-normal text-muted">UI/UX Designer</span>
+                                  </div>
+                              </div>
+                          </th>
+                          <td><span class="d-none d-md-block">nabiha.armstrong@example.com</span></td>
+                          <td><span class="d-none d-md-block">nabiha.armstrong@example.com</span></td>
+                          <td><a href="#" class="btn btn-outline-secondary" data-toggle="modal" data-target="#inListBooking">Guest Code</a></td>
+                      </tr>
+                      <tr><th colspan="4">Data tidak ditemukan. <a href="register-guest.html" class="btn-link">Register Data ?</a></th></tr>
+                  </tbody>
+            	</table>
+	      	</div>
+	        
+	      </div>
+	    </main>
+	  </div>
+	</div>
+
+	<!-- Modal in list today -->
+			<div class="modal fade" data-backdrop="static" data-keyboard="false" id="inListBooking" tabindex="-1" aria-labelledby="listBooking" aria-hidden="true">
+			  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+			    <div class="modal-content">
+			      <div class="modal-header bg-light">
+			        <h5 class="modal-title" id="listBooking">#M14047</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			       	<div class="row">
+				        <div class="col-md-3 border-right">
+				            <div class="d-flex flex-column align-items-center text-center p-3 "><img class="rounded-circle mt-2" src="https://i.imgur.com/O1RmJXT.jpg" width="90">
+				            	<span class="font-weight-bold">Djaja Soeprana</span>
+				            	<span class="text-black-50 mt-2"><span data-feather="phone"></span>&nbsp0888888998</span>
+				            	<span class="alert-primary p-2 mt-2">Subscript</span>
+				            </div>
+
+			            	<div class="border-top my-2 py-2">
+			            		<small>NIK</small>
+			            		<h6>12345</h6>
+			            	</div>
+			            	<div class="border-top my-2 py-2">
+			            		<small>KTA</small>
+			            		<h6>998498</h6>
+			            	</div>
+			            	<div class="border-top my-2 py-2">
+			            		<small>E-mail</small><br>
+			            		<small class="font-weight-bold">mail@mail.com</small>
+			            	</div>
+			            	<div class="border-top my-2 py-2">
+			            		<small>Subscription</small><br>
+			            		<small class="font-weight-bold">22 Aug 2020 - 22 Aug 2021</small>
+			            	</div>
+
+
+				        </div>
+				        <div class="col-md-5 border-right">
+				        	<h5 class="p-3 border-bottom">Booking</h5>
+				            <div class="px-3">
+				                <form class="mt-4">
+							  <div class="form-group">
+							    <label for="exampleInputEmail1">Tanggal</label>
+							    <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+							    <small id="emailHelp" class="form-text text-muted">Pastikan sudah melihat allotment</small>
+							  </div>
+							  <div class="form-group">
+							    <label for="exampleInputPassword1">Jam</label>
+							    <div class="row">
+								    <div class="col">
+								      <input type="time" class="form-control" placeholder="dari">
+								    </div>
+								    <div class="col">
+								      <input type="time" class="form-control" placeholder="sampai">
+								    </div>
+								  </div>
+							    <!-- <input type="text" class="form-control" id="exampleInputPassword1"> -->
+							  </div>
+							  <div class="form-group form-check">
+							    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							    <label class="form-check-label" for="exampleCheck1">Pinjam Senjata</label>
+							  </div>
+							  <div class="form-group form-check">
+							    <input type="checkbox" class="form-check-input" id="exampleCheck2">
+							    <label class="form-check-label" for="exampleCheck2">Tambahan Amunisi</label>
+							  </div>
+							  <div class="form-group">
+				                  <label for="exampleInputEmail1">Jumlah Peluru</label>
+				                  <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+				                </div>
+
+							  <div class="form-group">
+							    <label for="exampleInputEmail1">Terima Bayar</label>
+							    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+							  </div>
+
+
+							  
+
+							  	
+
+							  
+
+
+							  
+							</form>
+				            </div>
+				        </div>
+				        <div class="col-md-4">
+				        	<h5 class="p-3 border-bottom">Allotment</h5>
+				            <div class="px-3">
+				            	
+				            	<div class="form-group">
+							      <label for="exampleInputEmail1">Arena</label>
+							      <select class="custom-select">
+									  <option value="1">SNV 1</option>
+									  <option value="2">MAB 1</option>
+									  <option value="3">MAB 2</option>
+									</select>
+							    </div>
+
+
+							  	<div class="form-group">
+							      <label for="exampleInputEmail1">Guide</label>
+							      <select class="custom-select">
+									  <option value="1">Si A</option>
+									  <option value="2">Si B</option>
+									  <option value="3">Si C</option>
+									</select>
+							    </div>
+
+							    <div class="form-group">
+								    <label for="exampleInputEmail1">Note</label>
+								    <textarea class="form-control" placeholder="Informasi atambahan |max 255|optional" rows="3" resize="none"></textarea>
+								  </div>
+
+							    
+
+							    <button type="submit" class="btn btn-primary">Proses</button>
+								
+				            </div>
+
+				        </div>
+
+
+				    </div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+	<!-- end modal -->
+
+
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script> -->
+     <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <script type="text/javascript">
+    	feather.replace()
+    </script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script> -->
+        <!-- <script src="dashboard.js"></script></body> -->
+</html>
